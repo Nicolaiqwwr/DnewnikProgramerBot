@@ -1,7 +1,7 @@
 import telebot
 import time
 
-bot = telebot.TeleBot('1327274329:AAH0GdoQSt_f4tsW4ydjzS69kVG8dx94UIA', parse_mode=None)
+bot = telebot.TeleBot(':AAH0GdoQSt_f4tsW4ydjzS69kVG8dx94UIA', parse_mode=None)
 
 
 rules_chat_time = """Правила чата:
