@@ -4,7 +4,7 @@ import time
 bot = telebot.TeleBot(':AAH0GdoQSt_f4tsW4ydjzS69kVG8dx94UIA', parse_mode=None)
 
 
-rules_chat_time = """Правила чата:
+description_chat = """Правила чата:
 https://t.me/rulesofdnevnikprogram
 Должности чата:
 https://t.me/doljnostidnevnika
@@ -57,7 +57,10 @@ def handler_commands(message):
                      parse_mode='html')
     time.sleep(5)
 
-
+@bot.message_handler(commands=['description'])
+def handler_commands(message):
+    bot.send_message(message.chat.id, 'Описание чата:/n{0}'.format(description_chat),
+                     parse_mode='html')
 
 @bot.message_handler(commands=['rules'])
 def handler_commands(message):
